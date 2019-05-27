@@ -26,6 +26,9 @@ if __name__ == '__main__':
         if update_confirm.lower() == 'y':
             # 下载最新数据
             urllib.urlretrieve(url=apnic_file_url, filename=file_save_name, reporthook=show_progress)
+    else:
+        urllib.urlretrieve(url=apnic_file_url, filename=file_save_name, reporthook=show_progress)
+  
 
     # 读取文件内容
     record_dict_list = []
